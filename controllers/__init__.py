@@ -1,1 +1,1 @@
-from .main import MainHandler
+from .metadata import MetadataHandler
