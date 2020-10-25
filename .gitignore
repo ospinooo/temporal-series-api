@@ -130,3 +130,6 @@ dmypy.json
 
 
 .vscode/
+
+docker/influxdb/*
+!docker/influxdb/.gitkeep
