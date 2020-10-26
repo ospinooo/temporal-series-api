@@ -15,7 +15,8 @@ def make_app():
                     (r"/([^/]*)/series", controllers.SeriesHandler),
                     (r"/([^/]*)/measurements", controllers.MeasurementHandler),
                     (r"/([^/]*)/users", controllers.UsersRequestHandler),
-                    (r"/([^/]*)/data", controllers.DataRequestHandler),
+                    (r"/([^/]*)/measurement/([^/]*)",
+                     controllers.DataRequestHandler),
                     (r"/([^/]*)/retention_policy",
                      controllers.RetentionPolicyRequestHandler)]
 
