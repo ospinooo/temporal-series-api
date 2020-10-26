@@ -8,6 +8,13 @@
 
 > Temporal Rest API built with python and influxdb
 
+## TODO:
+
+- [ ] Add JWT Authentication (Tornado)
+- [ ] Add admin Authorizations (2 levels)
+- [ ] Setup-query reader with autoescale and configuration query
+
+
 ## Install
 
 ```sh
