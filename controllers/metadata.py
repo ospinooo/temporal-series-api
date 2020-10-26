@@ -6,7 +6,9 @@ class MetadataHandler(DefaultRequestHandler):
         pass
 
     def get(self):
-        pass
+        self.write({'res': self.get_argument('hola', True)})
+        self.set_status(404)
+        self.send_error()
 
     def post(self):
         pass
