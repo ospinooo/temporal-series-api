@@ -13,7 +13,7 @@ def make_app():
     routes_rules = [(r"/", controllers.MetadataHandler),
                     (r"/database", controllers.DatabaseHandler),
                     (r"/([^/]*)/series", controllers.SeriesHandler),
-                    (r"/([^/]*)/series", controllers.MeasurementHandler)]
+                    (r"/([^/]*)/measurements", controllers.MeasurementHandler)]
 
     return tornado.web.Application(routes_rules, debug=DEBUG)
 
