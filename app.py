@@ -3,17 +3,17 @@ import logging
 import tornado.ioloop
 import tornado.web
 
-from controllers import MetadataHandler
-from controllers import SeriesHandler
-from controllers import DatabaseHandler
+import controllers
 
 from config import PORT
 from config import DEBUG
 
 
 def make_app():
-    routes_rules = [(r"/", MetadataHandler), (r"/database", DatabaseHandler),
-                    (r"/([^/]*)/series", SeriesHandler)]
+    routes_rules = [(r"/", controllers.MetadataHandler),
+                    (r"/database", controllers.DatabaseHandler),
+                    (r"/([^/]*)/series", controllers.SeriesHandler),
+                    (r"/([^/]*)/series", controllers.MeasurementHandler)]
 
     return tornado.web.Application(routes_rules, debug=DEBUG)
 
