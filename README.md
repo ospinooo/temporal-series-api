@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Author
 
-👤 **ospinooo**
+👤 **Pablo Ospino**
 
 * Website: https://ospino.me
 * Github: [@ospinooo](https://github.com/ospinooo)
