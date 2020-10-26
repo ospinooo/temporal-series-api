@@ -133,3 +133,7 @@ dmypy.json
 
 docker/influxdb/*
 !docker/influxdb/.gitkeep
+
+
+docker/chronograf/*
+!docker/chronograf/.gitkeep
