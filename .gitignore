@@ -137,3 +137,6 @@ docker/influxdb/*
 
 docker/chronograf/*
 !docker/chronograf/.gitkeep
+
+
+.envrc_vars
