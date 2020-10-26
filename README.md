@@ -14,6 +14,10 @@
 pip install -r requirements.txt
 ```
 
+## Usage
+
+> See Makefile
+
 ## Author
 
 👤 **ospinooo**
