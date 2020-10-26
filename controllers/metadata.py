@@ -1,6 +1,6 @@
-import tornado.web
+from .default import DefaultRequestHandler
 
 
-class MetadataHandler(tornado.web.RequestHandler):
+class MetadataHandler(DefaultRequestHandler):
     def get(self):
-        self.write("Hello, world")
+        self.write({"res": "Hello, world"})

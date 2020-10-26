@@ -1,9 +1,10 @@
 import json
-import tornado.web
 from database.influxdb import db
 
+from .default import DefaultRequestHandler
 
-class SeriesHandler(tornado.web.RequestHandler):
+
+class SeriesHandler(DefaultRequestHandler):
     async def get(self, database: str):
         db.switch_database(database)
         res = db.get_list_series()
