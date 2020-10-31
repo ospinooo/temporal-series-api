@@ -12,7 +12,7 @@ from config import DEBUG
 def make_app():
     routes_rules = [(r"/", controllers.MetadataHandler),
                     (r"/databases", controllers.DatabaseHandler),
-                    (r"/series", controllers.SeriesHandler),
+                    (r"/([^/]*)/series", controllers.SeriesHandler),
                     (r"/([^/]*)/measurements", controllers.MeasurementHandler),
                     (r"/([^/]*)/users", controllers.UsersRequestHandler),
                     (r"/([^/]*)/measurement/([^/]*)",

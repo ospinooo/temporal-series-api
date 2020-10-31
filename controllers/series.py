@@ -5,8 +5,7 @@ from .default import DefaultRequestHandler
 
 
 class SeriesHandler(DefaultRequestHandler):
-    async def get(self):
-        database = self.get_argument('database', 'telegraf')
+    async def get(self, database: str):
         measurement = self.get_argument('measurement', None)
         tags_string = self.get_argument('tags', None)
 
