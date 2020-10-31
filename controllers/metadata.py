@@ -1,14 +1,14 @@
 from .default import DefaultRequestHandler
 
+from database.influxdb import db
+
 
 class MetadataHandler(DefaultRequestHandler):
     def head(self):
         pass
 
     def get(self):
-        self.write({'res': self.get_argument('hola', True)})
-        self.set_status(404)
-        self.send_error()
+        self.write({'res': db.ping()})
 
     def post(self):
         pass

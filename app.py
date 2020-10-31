@@ -11,6 +11,8 @@ from config import DEBUG
 
 def make_app():
     routes_rules = [(r"/", controllers.MetadataHandler),
+                    (r"/ping", controllers.MetadataHandler),
+                    (r"/version", controllers.MetadataHandler),
                     (r"/databases", controllers.DatabaseHandler),
                     (r"/([^/]*)/series", controllers.SeriesHandler),
                     (r"/([^/]*)/measurements", controllers.MeasurementHandler),
