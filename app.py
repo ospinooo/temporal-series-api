@@ -16,8 +16,10 @@ def make_app():
                     (r"/databases", controllers.DatabaseHandler),
                     (r"/([^/]*)/series", controllers.SeriesHandler),
                     (r"/([^/]*)/measurements", controllers.MeasurementHandler),
+                    (r"/([^/]*)/tags", controllers.TagsRequestHandler),
+                    (r"/([^/]*)/fields", controllers.FieldsHandler),
                     (r"/([^/]*)/users", controllers.UsersRequestHandler),
-                    (r"/([^/]*)/measurement/([^/]*)",
+                    (r"/([^/]*)/measurement/([^/]*)/data",
                      controllers.DataRequestHandler),
                     (r"/([^/]*)/retention_policy",
                      controllers.RetentionPolicyRequestHandler)]
