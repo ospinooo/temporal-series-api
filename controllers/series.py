@@ -10,9 +10,10 @@ class SeriesHandler(DefaultRequestHandler):
         tags_string = self.get_argument('tags', None)
 
         tags = {}
-        for tag in tags_string.split(','):
-            k, v = tag.split(':')
-            tags[k] = v
+        if tags_string is not None:
+            for tag in tags_string.split(','):
+                k, v = tag.split(':')
+                tags[k] = v
 
         res = db.get_list_series(database=database,
                                  measurement=measurement,
