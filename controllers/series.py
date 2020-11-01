@@ -1,3 +1,4 @@
+from controllers.tag import parse_tag_string
 import json
 from database.influxdb import db
 
@@ -11,9 +12,7 @@ class SeriesHandler(DefaultRequestHandler):
 
         tags = {}
         if tags_string is not None:
-            for tag in tags_string.split(','):
-                k, v = tag.split(':')
-                tags[k] = v
+            tags = parse_tag_string(tags_string)
 
         res = db.get_list_series(database=database,
                                  measurement=measurement,
