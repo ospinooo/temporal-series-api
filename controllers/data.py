@@ -25,7 +25,7 @@ class DataRequestHandler(DefaultRequestHandler):
         if init_dt is None and end_dt is None:
             time_str = f"time > now() - 1h"
         else:
-            time_str = f"time >= {init_dt} AND time < {end_dt}"
+            time_str = f"time >= '{init_dt}' AND time < '{end_dt}'"
 
         query = (f"SELECT {fields_str} "
                  f' FROM "{database}"."autogen"."{measurement}"  '
